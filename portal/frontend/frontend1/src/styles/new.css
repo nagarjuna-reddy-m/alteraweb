@@ -1,0 +1,175 @@
+/* ===== GLOBAL ===== */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  display: block;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  place-items: inherit;
+  background: linear-gradient(135deg, #071426, #0d1b34);
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+}
+
+/* ===== DASHBOARD WRAPPER ===== */
+
+.dashboard-wrapper {
+  padding: 40px 60px;
+}
+
+/* ===== HEADER ===== */
+
+.dashboard-title {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* ===== STAT CARDS ===== */
+
+.stats-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 220px;
+  background: #16213e;
+  padding: 25px;
+  border-radius: 14px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  border-radius: 14px 14px 0 0;
+}
+
+.border-warning::before {
+  background: #ffc107;
+}
+
+.border-primary::before {
+  background: #0d6efd;
+}
+
+.border-danger::before {
+  background: #dc3545;
+}
+
+.border-info::before {
+  background: #0dcaf0;
+}
+
+.stat-title {
+  font-size: 14px;
+  color: #9fa6b2;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+/* ===== TABLE ===== */
+
+.table-card {
+  background: #16213e;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.table-card h5 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.table-dark {
+  background: transparent;
+  color: white;
+}
+
+.table-dark thead {
+  background: #1f2a4d;
+}
+
+.table-dark tbody tr {
+  transition: 0.2s ease;
+}
+
+.table-dark tbody tr:hover {
+  background: #1f2a4d;
+}
+
+.badge-danger {
+  background-color: #dc3545;
+}
+
+/* HEADER */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* PROGRAM TABS */
+
+.program-tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.program-tab {
+  padding: 10px 20px;
+  background: #16213e;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.program-tab.active {
+  background: #1f2a4d;
+  color: #00d4ff;
+}
+
+/* VIEW TOGGLE */
+
+.view-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.view-toggle button {
+  background: #16213e;
+  border: none;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+
+.view-toggle button.active {
+  background: #00d4ff;
+  color: black;
+}
